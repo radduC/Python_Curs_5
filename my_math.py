@@ -48,11 +48,14 @@ if __name__ == "__main__":
         choice = input('Verificati numar? y/n ')
 
         if choice == 'y':
-            numar = int(input('n = '))
-            print('numar prim: ', is_prime(numar))
-            print('patrat perfect ', is_perfect_square(numar))
-            print('numere prime, patrate perfecte, total numere verificate: ',
-                  numere_prime, patrate_perfecte, numere_verificate)
+            try:
+                numar = int(input('n = '))
+                print('numar prim: ', is_prime(numar))
+                print('patrat perfect ', is_perfect_square(numar))
+                print('numere prime, patrate perfecte, total numere verificate: ',
+                      numere_prime, patrate_perfecte, numere_verificate)
+            except ValueError:
+                print('Acesta nu este un numar!')
         elif choice == 'n':
             print('numere prime, patrate perfecte, total numere verificate: ',
                   numere_prime, patrate_perfecte, numere_verificate)
