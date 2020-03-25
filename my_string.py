@@ -3,7 +3,7 @@ def capitalize_string(string):
 
 
 def count_letters(string):
-    return {letter: string.count(letter) for letter in string}
+    return {letter: string.count(letter) for letter in string if letter.isalpha()}
 
 
 if __name__ == "__main__":
